@@ -21,7 +21,6 @@ songItems.forEach((element, i)=>{
 })
  
 
-// Handle play/pause click
 masterPlay.addEventListener('click', ()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
