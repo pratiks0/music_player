@@ -6,7 +6,7 @@ let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
-
+// this is the list of songs and file type
 let songs = [
     {songName: "Band4Band- Central cee", filePath:"songs/1.mp3"},
     {songName: "Aha tamatar", filePath:"songs/2.mp3"},
@@ -20,7 +20,7 @@ songItems.forEach((element, i)=>{
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 })
  
-
+// play button
 masterPlay.addEventListener('click', ()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
@@ -36,6 +36,7 @@ masterPlay.addEventListener('click', ()=>{
     }
 })
 
+//updating seekbar
 audioElement.addEventListener('timeupdate', ()=>{ 
     // Update Seekbar
     progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
